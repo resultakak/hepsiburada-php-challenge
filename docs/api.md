@@ -14,8 +14,8 @@ http://localhost:8080/api/v1/plateau
 
 ```JSON
 {
-    "width": 5,
-    "height": 5
+  "width": 5,
+  "height": 5
 }
 ```
 
@@ -36,15 +36,15 @@ Content-Length: 35
 
 ```json
 {
-    "data": {
-        "id": 1,
-        "width": 5,
-        "height": 5
-    },
-    "meta": {
-        "timestamp": "2021-08-02T17:21:23+00:00",
-        "hash": "a28aacd13b7b9034905cf14443fb22c3af4f6e92"
-    }
+  "data": {
+    "id": 1,
+    "width": 5,
+    "height": 5
+  },
+  "meta": {
+    "timestamp": "2021-08-02T17:21:23+00:00",
+    "hash": "a28aacd13b7b9034905cf14443fb22c3af4f6e92"
+  }
 }
 ```
 
@@ -106,15 +106,15 @@ Host: localhost:8080
 
 ```json
 {
-    "data": {
-        "id": 1,
-        "width": 5,
-        "height": 5
-    },
-    "meta": {
-        "timestamp": "2021-08-02T17:24:47+00:00",
-        "hash": "62c8d286b7de0fc43a4e00cb35fe939f39381bf3"
-    }
+  "data": {
+    "id": 1,
+    "width": 5,
+    "height": 5
+  },
+  "meta": {
+    "timestamp": "2021-08-02T17:24:47+00:00",
+    "hash": "62c8d286b7de0fc43a4e00cb35fe939f39381bf3"
+  }
 }
 ```
 
@@ -166,15 +166,15 @@ Content-Length: 37
 
 ```json
 {
-    "data": {
-        "id": 5,
-        "width": 10,
-        "height": 10
-    },
-    "meta": {
-        "timestamp": "2021-08-02T17:26:04+00:00",
-        "hash": "0e4f0384dfdff78d14737a2e4dcd7131d80619e2"
-    }
+  "data": {
+    "id": 5,
+    "width": 10,
+    "height": 10
+  },
+  "meta": {
+    "timestamp": "2021-08-02T17:26:04+00:00",
+    "hash": "0e4f0384dfdff78d14737a2e4dcd7131d80619e2"
+  }
 }
 ```
 
@@ -207,15 +207,15 @@ Host: localhost:8080
 
 ```json
 {
-    "data": {
-        "id": 5,
-        "width": 10,
-        "height": 10
-    },
-    "meta": {
-        "timestamp": "2021-08-02T17:27:59+00:00",
-        "hash": "09917d442140874e5711ce614b2506418b9641fd"
-    }
+  "data": {
+    "id": 5,
+    "width": 10,
+    "height": 10
+  },
+  "meta": {
+    "timestamp": "2021-08-02T17:27:59+00:00",
+    "hash": "09917d442140874e5711ce614b2506418b9641fd"
+  }
 }
 ```
 
@@ -228,11 +228,6 @@ Host: localhost:8080
   }
 }
 ```
-
-
-
-
-
 
 ### Rover
 
@@ -289,7 +284,6 @@ Content-Type: application/json
 }
 ```
 
-
 **Example Error**
 
 ```json
@@ -303,10 +297,6 @@ Content-Type: application/json
   }
 }
 ```
-
-
-
-
 
 #### `GET` rovers
 
@@ -390,13 +380,6 @@ Host: localhost:8080
   }
 }
 ```
-
-
-
-
-
-
-
 
 .
 
@@ -506,4 +489,5 @@ Host: localhost:8080
 Also [Download bash File](Requests.http)
 
 ---
+
 ### [Index](index)
