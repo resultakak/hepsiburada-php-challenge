@@ -19,7 +19,8 @@ Hepsiburada.com PHP Challenge: Mars Rover
 
 ### Files
 
-* [Diagram](diagram.png)
+* [Diagram (PNG)](diagram.png)
+* [Diagram (UML)](diagram.uml)
 * [HTTP Request File](Requests.http)
 
 ### Postman Collections

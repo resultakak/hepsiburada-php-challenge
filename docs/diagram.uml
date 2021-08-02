@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>/Users/resultakak/workspace/hepsiburada-php-challenge/src</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1628.0">\Api\Nasa\Rover\RoverFactoryInterface</node>
+    <node x="1383.140625" y="229.0">\Api\Http\Response</node>
+    <node x="109.25" y="1335.0">\Api\Nasa\Action\ActionInterface</node>
+    <node x="970.0" y="1335.0">\Api\Bootstrap\Application</node>
+    <node x="1467.5" y="1335.0">\Api\Nasa\Command\CommandInterface</node>
+    <node x="285.0" y="1733.0">\Api\Nasa\Plateau\PlateauFactory</node>
+    <node x="264.0" y="845.0">\Api\Nasa\Rover\Controller\ControllerInterface</node>
+    <node x="291.5" y="1168.0">\Api\Nasa\Rover\Controller\Controller</node>
+    <node x="719.0" y="1628.0">\Api\Entity\EntityInterface</node>
+    <node x="0.0" y="1733.0">\Api\Nasa\Rover\RoverFactory</node>
+    <node x="192.0" y="678.5">\Api\Controllers\DefaultController</node>
+    <node x="264.0" y="973.0">\Api\Nasa\Rover\Controller\AbstractController</node>
+    <node x="1461.0" y="1415.0">\Api\Nasa\Command\Command</node>
+    <node x="297.0" y="294.0">\Api\Mvc\Controller</node>
+    <node x="562.0" y="678.5">\Api\Controllers\NotFoundController</node>
+    <node x="1396.140625" y="91.0">\Api\Http\ResponseInterface</node>
+    <node x="685.0" y="1335.0">\Api\Nasa\Rover\Rover</node>
+    <node x="1089.140625" y="261.0">\Api\Core\Router</node>
+    <node x="1152.0" y="1335.0">\Api\Nasa\Command\CommandCollectionInterface</node>
+    <node x="549.0" y="845.0">\Api\Constants\HttpCodes</node>
+    <node x="962.0" y="634.5">\Api\Repository\PlateauRepository</node>
+    <node x="1620.640625" y="229.5">\Api\Http\Request</node>
+    <node x="1181.5" y="1440.0">\Api\Nasa\Command\CommandCollection</node>
+    <node x="0.0" y="925.0">\Api\Nasa\Position\Position</node>
+    <node x="273.0" y="77.0">\Api\Mvc\ControllerInterface</node>
+    <node x="1124.4921875" y="0.0">\Api\Core\RouterInterface</node>
+    <node x="436.0" y="1335.0">\Api\Core\Session</node>
+    <node x="1516.890625" y="0.0">\Api\Http\HttpInterface</node>
+    <node x="285.0" y="1628.0">\Api\Nasa\Plateau\PlateauFactoryInterface</node>
+    <node x="773.0" y="634.5">\Api\Repository\RoverRepository</node>
+    <node x="25.0" y="845.0">\Api\Nasa\Position\PositionInterface</node>
+    <node x="767.625" y="77.0">\Api\Traits\InstanceTrait</node>
+    <node x="383.0" y="612.0">\Api\Controllers\Rest\RoverController</node>
+    <node x="0.0" y="1415.0">\Api\Nasa\Action\Spin</node>
+    <node x="1291.0" y="1628.0">\Api\Core\Storage</node>
+    <node x="820.0" y="845.0">\Api\Entity\RoverEntity</node>
+    <node x="0.0" y="623.0">\Api\Controllers\Rest\PlateauController</node>
+    <node x="558.0" y="1628.0">\Api\Nasa\Constants\Directions</node>
+    <node x="1377.0" y="972.0">\Api\Nasa\Plateau\Plateau</node>
+    <node x="1601.140625" y="80.0">\Api\Http\RequestInterface</node>
+    <node x="1099.0" y="845.0">\Api\Nasa\Constants\Commands</node>
+    <node x="1404.0" y="845.0">\Api\Nasa\Plateau\PlateauInterface</node>
+    <node x="858.140625" y="316.0">\Api\Repository\Repository</node>
+    <node x="1111.0" y="1628.0">\Api\Traits\RequestTrait</node>
+    <node x="189.0" y="1426.5">\Api\Nasa\Action\Move</node>
+    <node x="915.0" y="1628.0">\Api\Nasa\Rover\RoverInterface</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\Api\Controllers\NotFoundController" target="\Api\Mvc\Controller" relationship="GENERALIZATION">
+      <point x="-47.75" y="-27.5" />
+      <point x="609.75" y="586.0" />
+      <point x="370.0" y="586.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="\Api\Repository\RoverRepository" target="\Api\Repository\Repository" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="857.5" y="586.0" />
+      <point x="963.640625" y="586.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="\Api\Controllers\Rest\PlateauController" target="\Api\Mvc\Controller" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.0" />
+      <point x="86.0" y="586.0" />
+      <point x="370.0" y="586.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="\Api\Repository\PlateauRepository" target="\Api\Repository\Repository" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="1051.5" y="586.0" />
+      <point x="963.640625" y="586.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="\Api\Nasa\Plateau\PlateauFactory" target="\Api\Nasa\Plateau\PlateauFactoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Http\Request" target="\Api\Http\RequestInterface" relationship="REALIZATION">
+      <point x="0.0" y="-115.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="\Api\Controllers\DefaultController" target="\Api\Mvc\Controller" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.5" />
+      <point x="277.5" y="586.0" />
+      <point x="370.0" y="586.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="\Api\Mvc\Controller" target="\Api\Mvc\ControllerInterface" relationship="REALIZATION">
+      <point x="-36.5" y="-116.5" />
+      <point x="333.5" y="235.0" />
+      <point x="365.0" y="235.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Http\ResponseInterface" target="\Api\Http\HttpInterface" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-38.5" />
+      <point x="1488.640625" y="55.0" />
+      <point x="1587.390625" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Nasa\Plateau\Plateau" target="\Api\Nasa\Plateau\PlateauInterface" relationship="REALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="\Api\Nasa\Rover\Controller\AbstractController" target="\Api\Nasa\Rover\Controller\ControllerInterface" relationship="REALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="\Api\Repository\Repository" target="\Api\Traits\InstanceTrait" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="963.640625" y="235.0" />
+      <point x="835.625" y="235.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Nasa\Command\CommandCollection" target="\Api\Nasa\Command\CommandCollectionInterface" relationship="REALIZATION">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Http\Response" target="\Api\Http\ResponseInterface" relationship="REALIZATION">
+      <point x="0.0" y="-116.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="\Api\Controllers\NotFoundController" target="\Api\Traits\InstanceTrait" relationship="REALIZATION">
+      <point x="47.75" y="-27.5" />
+      <point x="705.25" y="586.0" />
+      <point x="662.5" y="586.0" />
+      <point x="662.5" y="235.0" />
+      <point x="835.625" y="235.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Nasa\Action\Move" target="\Api\Nasa\Action\ActionInterface" relationship="REALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="290.0" y="1390.0" />
+      <point x="187.25" y="1390.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Controllers\Rest\RoverController" target="\Api\Mvc\Controller" relationship="GENERALIZATION">
+      <point x="0.0" y="-94.0" />
+      <point x="462.5" y="586.0" />
+      <point x="370.0" y="586.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="\Api\Core\Router" target="\Api\Traits\InstanceTrait" relationship="REALIZATION">
+      <point x="-62.25" y="-149.5" />
+      <point x="1151.390625" y="235.0" />
+      <point x="835.625" y="235.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Nasa\Command\Command" target="\Api\Nasa\Command\CommandInterface" relationship="REALIZATION">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Http\RequestInterface" target="\Api\Http\HttpInterface" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-49.5" />
+      <point x="1686.140625" y="55.0" />
+      <point x="1587.390625" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Nasa\Rover\RoverFactory" target="\Api\Nasa\Rover\RoverFactoryInterface" relationship="REALIZATION">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="\Api\Nasa\Rover\Controller\Controller" target="\Api\Nasa\Rover\Controller\AbstractController" relationship="GENERALIZATION">
+      <point x="0.0" y="-49.5" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="\Api\Core\Router" target="\Api\Core\RouterInterface" relationship="REALIZATION">
+      <point x="62.25" y="-149.5" />
+      <point x="1275.890625" y="235.0" />
+      <point x="1221.9921875" y="235.0" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="\Api\Nasa\Position\Position" target="\Api\Nasa\Position\PositionInterface" relationship="REALIZATION">
+      <point x="0.0" y="-182.5" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Nasa\Action\Spin" target="\Api\Nasa\Action\ActionInterface" relationship="REALIZATION">
+      <point x="0.0" y="-84.0" />
+      <point x="84.5" y="1390.0" />
+      <point x="187.25" y="1390.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="\Api\Mvc\Controller" target="\Api\Traits\InstanceTrait" relationship="REALIZATION">
+      <point x="36.5" y="-116.5" />
+      <point x="406.5" y="235.0" />
+      <point x="835.625" y="235.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8675884955752211" showDependencies="false" x="1074.2948999238286" y="1690.1141144970038" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constants</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
