@@ -1,7 +1,7 @@
 ## API
 
 ### Plateau
-
+.
 #### `POST` plateau
 
 Create Plateau
@@ -47,6 +47,7 @@ Content-Length: 35
   }
 }
 ```
+.
 
 #### `GET` plateaus
 
@@ -86,6 +87,7 @@ Host: localhost:8080
   }
 }
 ```
+.
 
 #### `GET` plateau/{id}
 
@@ -131,6 +133,7 @@ Host: localhost:8080
   }
 }
 ```
+.
 
 #### `PUT` plateau/{id}
 
@@ -187,6 +190,7 @@ Content-Length: 37
   }
 }
 ```
+.
 
 #### `DEL` plateau/{id}
 
@@ -228,8 +232,10 @@ Host: localhost:8080
   }
 }
 ```
+.
 
 ### Rover
+.
 
 #### `POST` rover
 
@@ -297,6 +303,7 @@ Content-Type: application/json
   }
 }
 ```
+.
 
 #### `GET` rovers
 
@@ -333,6 +340,7 @@ Host: localhost:8080
   }
 }
 ```
+.
 
 #### `GET` rover/{id}
 
@@ -381,6 +389,7 @@ Host: localhost:8080
 }
 ```
 
+.
 .
 
 #### `PUT` rover/{id}
@@ -442,6 +451,7 @@ Content-Length: 37
   }
 }
 ```
+.
 
 #### `DEL` rover/{id}
 
