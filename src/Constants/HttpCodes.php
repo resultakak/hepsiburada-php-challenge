@@ -43,7 +43,7 @@ class HttpCodes
 
     public const BAD_GATEWAY           = 502;
 
-    public const $codes = [
+    public array $codes = [
         200 => 'OK',
         301 => 'Moved Permanently',
         302 => 'Found',
