@@ -1,0 +1,17 @@
+theme: jekyll-theme-minimal
+locale: "en-US"
+title: "Challenge: Mars Rover"
+author: "Resul Takak"
+avatar: "/assets/img/logo.svg"
+social-network-links:
+  github: "resultakak"
+  email: "resultakak@gmail.com"
+timezone: "Europe/Istanbul"
+exclude:
+  - CHANGELOG.md
+repository: "https://github.com/resultakak/hepsiburada-php-challenge"
+include:
+  - started.md
+  - install.md
+  - api.md
+  - folder.md
