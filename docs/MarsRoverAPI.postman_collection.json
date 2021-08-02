@@ -1,0 +1,785 @@
+{
+	"info": {
+		"_postman_id": "4d67c821-bd53-4952-8af9-7d792d8e0239",
+		"name": "Mars Rover API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "plateau",
+			"item": [
+				{
+					"name": "plateau",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"pm.collectionVariables.set(\"plateau_id\", resp.data.id);",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.width).to.be.a(\"number\");",
+									"  pm.expect(resp.data.height).to.be.a(\"number\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"width\": 5,\n    \"height\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}plateau",
+							"host": [
+								"{{url}}plateau"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plateaus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data).to.be.a(\"object\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}plateaus",
+							"host": [
+								"{{url}}plateaus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plateau/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.width).to.be.a(\"number\");",
+									"  pm.expect(resp.data.height).to.be.a(\"number\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}plateau/{{plateau_id}}",
+							"host": [
+								"{{url}}plateau"
+							],
+							"path": [
+								"{{plateau_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plateau/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.width).to.be.a(\"number\");",
+									"  pm.expect(resp.data.height).to.be.a(\"number\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([202]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"width\": 10,\n    \"height\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}plateau/{{plateau_id}}",
+							"host": [
+								"{{url}}plateau"
+							],
+							"path": [
+								"{{plateau_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plateau/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.width).to.be.a(\"number\");",
+									"  pm.expect(resp.data.height).to.be.a(\"number\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}plateau/{{plateau_id}}",
+							"host": [
+								"{{url}}plateau"
+							],
+							"path": [
+								"{{plateau_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rover",
+			"item": [
+				{
+					"name": "rover",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"pm.collectionVariables.set(\"rover_id\", resp.data.id);",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.plateau_id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.x).to.be.a(\"number\");",
+									"  pm.expect(resp.data.y).to.be.a(\"number\");",
+									"  pm.expect(resp.data.direction).to.be.a(\"string\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plateau_id\": {{plateau_id}},\n    \"x\": 1,\n    \"y\": 2,\n    \"direction\": \"N\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}rover",
+							"host": [
+								"{{url}}rover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rovers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data).to.be.a(\"object\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}rovers",
+							"host": [
+								"{{url}}rovers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rover/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.plateau_id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.x).to.be.a(\"number\");",
+									"  pm.expect(resp.data.y).to.be.a(\"number\");",
+									"  pm.expect(resp.data.direction).to.be.a(\"string\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}rover/{{rover_id}}",
+							"host": [
+								"{{url}}rover"
+							],
+							"path": [
+								"{{rover_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rover/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.plateau_id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.x).to.be.a(\"number\");",
+									"  pm.expect(resp.data.y).to.be.a(\"number\");",
+									"  pm.expect(resp.data.direction).to.be.a(\"string\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([202]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plateau_id\": {{plateau_id}},\n    \"x\": 2,\n    \"y\": 2,\n    \"direction\": \"E\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}rover/{{rover_id}}",
+							"host": [
+								"{{url}}rover"
+							],
+							"path": [
+								"{{rover_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rover/{:id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();",
+									"",
+									"pm.test(\"Test data type of the response\", () => {",
+									"  pm.expect(resp.data.id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.plateau_id).to.be.a(\"number\");",
+									"  pm.expect(resp.data.x).to.be.a(\"number\");",
+									"  pm.expect(resp.data.y).to.be.a(\"number\");",
+									"  pm.expect(resp.data.direction).to.be.a(\"string\");",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is present\", () => {",
+									"  pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+									"});",
+									"",
+									"pm.test(\"Cookie PHPSESSID is present\", () => {",
+									"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", () => {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}rover/{{rover_id}}",
+							"host": [
+								"{{url}}rover"
+							],
+							"path": [
+								"{{rover_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "command",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const resp = pm.response.json();",
+							"",
+							"pm.test(\"Successful POST request\", () => {",
+							"  pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", () => {",
+							"  pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is application/json\", () => {",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+							"});",
+							"",
+							"pm.test(\"Cookie PHPSESSID is present\", () => {",
+							"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rover_id\": {{rover_id}},\n    \"commands\": \"LMLMLMLMM\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}rover/command",
+					"host": [
+						"{{url}}rover"
+					],
+					"path": [
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rover/state/{:id}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const resp = pm.response.json();",
+							"",
+							"pm.test(\"Test data type of the response\", () => {",
+							"  pm.expect(resp.data.id).to.be.a(\"number\");",
+							"  pm.expect(resp.data.plateau_id).to.be.a(\"number\");",
+							"  pm.expect(resp.data.x).to.be.a(\"number\");",
+							"  pm.expect(resp.data.y).to.be.a(\"number\");",
+							"  pm.expect(resp.data.direction).to.be.a(\"string\");",
+							"});",
+							"",
+							"pm.test(\"Successful POST request\", () => {",
+							"  pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", () => {",
+							"  pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is application/json\", () => {",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=UTF-8');",
+							"});",
+							"",
+							"pm.test(\"Cookie PHPSESSID is present\", () => {",
+							"  pm.expect(pm.cookies.has('PHPSESSID')).to.be.true;",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}rover/state/{{rover_id}}",
+					"host": [
+						"{{url}}rover"
+					],
+					"path": [
+						"state",
+						"{{rover_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/api/v1/"
+		},
+		{
+			"key": "plateau_id",
+			"value": "1"
+		},
+		{
+			"key": "rover_id",
+			"value": ""
+		}
+	]
+}

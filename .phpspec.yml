@@ -1,0 +1,6 @@
+suites:
+  default:
+    namespace: Api
+    psr4_prefix: Api
+
+formatter.name: pretty
