@@ -21,7 +21,7 @@ http://localhost:8080/api/v1/plateau
 
 **Example Request**
 
-```http request
+```bash
 POST /api/v1/plateau HTTP/1.1
 Host: localhost:8080
 Content-Length: 35
@@ -58,7 +58,7 @@ http://localhost:8080/api/v1/plateaus
 
 **Example Request**
 
-```http request
+```bash
 GET /api/v1/plateaus HTTP/1.1
 Host: localhost:8080
 ```
@@ -97,7 +97,7 @@ http://localhost:8080/api/v1/plateau/{id}
 
 **Example Request**
 
-```http request
+```bash
 GET /api/v1/plateau/1 HTTP/1.1
 Host: localhost:8080
 ```
@@ -142,7 +142,7 @@ http://localhost:8080/api/v1/plateau/{id}
 
 **Body**
 
-```http request
+```bash
 {
   "width": 10,
   "height": 10
@@ -151,7 +151,7 @@ http://localhost:8080/api/v1/plateau/{id}
 
 **Example Request**
 
-```http request
+```bash
 PUT /api/v1/plateau/1 HTTP/1.1
 Host: localhost:8080
 Content-Length: 37
@@ -198,7 +198,7 @@ http://localhost:8080/api/v1/plateau/{id}
 
 **Example Request**
 
-```http request
+```bash
 DELETE /api/v1/plateau/1 HTTP/1.1
 Host: localhost:8080
 ```
@@ -257,7 +257,7 @@ http://localhost:8080/api/v1/rover
 
 **Example Request**
 
-```http request
+```bash
 POST /api/v1/rover HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
@@ -318,7 +318,7 @@ http://localhost:8080/api/v1/rovers
 
 **Example Request**
 
-```http request
+```bash
 GET /api/v1/rovers HTTP/1.1
 Host: localhost:8080
 ```
@@ -354,7 +354,7 @@ http://localhost:8080/api/v1/rover/{id}
 
 **Example Request**
 
-```http request
+```bash
 GET /api/v1/rover/1 HTTP/1.1
 Host: localhost:8080
 ```
@@ -410,7 +410,7 @@ http://localhost:8080/api/v1/rover/{id}
 
 **Body**
 
-```http request
+```bash
 {
     "plateau_id": 1,
     "x": 2,
@@ -421,7 +421,7 @@ http://localhost:8080/api/v1/rover/{id}
 
 **Example Request**
 
-```http request
+```bash
 PUT /api/v1/rover/1 HTTP/1.1
 Host: localhost:8080
 Content-Length: 37
@@ -470,7 +470,7 @@ http://localhost:8080/api/v1/rover/{id}
 
 **Example Request**
 
-```http request
+```bash
 DELETE /api/v1/rover/1 HTTP/1.1
 Host: localhost:8080
 ```
@@ -503,7 +503,7 @@ Host: localhost:8080
 }
 ```
 
-Also [Download HTTP Request File](Requests.http)
+Also [Download bash File](Requests.http)
 
 ---
 ### [Index](index)
