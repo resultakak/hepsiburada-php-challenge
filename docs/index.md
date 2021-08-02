@@ -16,9 +16,10 @@ Hepsiburada.com PHP Challenge: Mars Rover
 
 * [Mars Rover API](api)
 
-### Diagrams
+### Files
 
 * [Diagram](diagram.png)
+* [HTTP Request File](Requests.http)
 
 ### Postman Collections
 
