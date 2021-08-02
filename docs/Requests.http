@@ -1,14 +1,58 @@
 POST http://localhost:8080/api/v1/plateau
 Content-Type: application/json
 
-{"name": "Name"}
-
-###
-GET http://localhost:8080/api/v1/plateau/:id
-Accept: application/json
+{"width": 5, "height": 5}
 
 ###
 GET http://localhost:8080/api/v1/plateaus
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/plateau/1
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/v1/plateau/1
+Accept: application/json
+
+{"width": 10,"height": 10}
+
+###
+POST http://localhost:8080/api/v1/rover
+Content-Type: application/json
+
+{"plateau_id": 1, "x": 1, "y": 2, "direction": "N"}
+
+###
+GET http://localhost:8080/api/v1/rovers
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/rover/1
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/v1/rover/1
+Content-Type: application/json
+
+{"plateau_id": 1, "x": 2, "y": 3, "direction": "E"}
+
+###
+POST http://localhost:8080/api/v1/rover/command
+Content-Type: application/json
+
+{"rover_id": 1, "commands": "LMLMLMLMM"}
+
+###
+DELETE http://localhost:8080/api/v1/plateau/1
+Accept: application/json
+
+###
+DELETE http://localhost:8080/api/v1/rover/1
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/rover/state/1
 Accept: application/json
 
 ###
